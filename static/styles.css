@@ -1,0 +1,9 @@
+html {
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background-image: radial-gradient(#082B44 0%, #000000 100%);
+  color: white;
+}
