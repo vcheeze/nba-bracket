@@ -500,7 +500,7 @@
       "purpose": "any"
     },
     {
-      "src": "blob:https://www.pwabuilder.com/a05264f6-a9f1-43d3-8325-f9e524b6096e",
+      "src": "/icon-512x512.png",
       "type": "image/png",
       "sizes": "512x512",
       "purpose": "any"
@@ -680,7 +680,7 @@
       "purpose": "any"
     },
     {
-      "src": "blob:https://www.pwabuilder.com/3a0add90-a230-47e0-8f5c-fbaae7706a30",
+      "src": "/icon-512x512.png",
       "type": "image/png",
       "sizes": "512x512",
       "purpose": "any"
