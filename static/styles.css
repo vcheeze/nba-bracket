@@ -4,8 +4,6 @@ html {
 }
 
 body {
-  height: 100%;
-  width: 100%;
   background-image: radial-gradient(#082B44 0%, #000000 100%);
   color: white;
 }

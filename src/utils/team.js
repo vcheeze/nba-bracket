@@ -1,6 +1,6 @@
 const EMPTY_TEAM = {
   name: '___',
-  position: 0,
+  position: '_',
   logo: ''
 };
 

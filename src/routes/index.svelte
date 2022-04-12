@@ -183,6 +183,10 @@
       onInput={() => {}}
     />
   </div>
+  <footer>
+    <p>Take a screenshot. Share with your friends!</p>
+		<p>Created by <a href="https://github.com/vcheeze">vcheeze</a></p>
+  </footer>
 </div>
 
 <style>
@@ -223,5 +227,10 @@
   .grand-finals {
     margin: -200px auto 0;
     max-width: 20%;
+  }
+
+  footer {
+		margin: 8rem auto;
+    text-align: center;
   }
 </style>
