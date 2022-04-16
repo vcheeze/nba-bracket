@@ -1,16 +1,10 @@
 <script>
-	export let teamA = {
-		name: 'Team A',
-		logo: '',
-		position: 1
-	};
-	export let teamB = {
-		name: 'Team B',
-		logo: '',
-		position: 8
-	};
+	import { EMPTY_TEAM } from '../utils/team';
+
+	export let teamA = EMPTY_TEAM;
+	export let teamB = EMPTY_TEAM;
 	export let onInput;
-	export let title;
+	export let title = '';
 
 	let teamAPrediction;
 	let teamBPrediction;
@@ -30,7 +24,13 @@
 
 <div class="bracket-pair-container">
 	{#if title}
-		<h3>{title}</h3>
+		<h3>
+			{#if title === 'Finals'}
+					<img src="https://cdn.nba.com/logos/playoffs/finals.svg" alt={title} width="157px" />
+			{:else}
+				{title}
+			{/if}
+		</h3>
 	{/if}
 	<div class="bracket-pair">
 
