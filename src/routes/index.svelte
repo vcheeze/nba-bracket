@@ -161,8 +161,8 @@
     <div class="eastern round first-round">
       <BracketPair
         teamA={TEAM.MIA}
-        teamB={TEAM.BKN}
-        onInput={onBracketInput('east', 'semis', 'winner1v8', TEAM.MIA, TEAM.BKN)}
+        teamB={TEAM.ATL}
+        onInput={onBracketInput('east', 'semis', 'winner1v8', TEAM.MIA, TEAM.ATL)}
 				title="Playoffs Round 1"
       />
       <BracketPair
@@ -177,8 +177,8 @@
       />
       <BracketPair
         teamA={TEAM.BOS}
-        teamB={TEAM.ATL}
-        onInput={onBracketInput('east', 'semis', 'winner2v7', TEAM.BOS, TEAM.ATL)}
+        teamB={TEAM.BKN}
+        onInput={onBracketInput('east', 'semis', 'winner2v7', TEAM.BOS, TEAM.BKN)}
       />
     </div>
 	</div>
