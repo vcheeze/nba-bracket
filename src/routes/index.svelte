@@ -59,10 +59,9 @@
 	<div class="title">
 		<img
 			class="title_img"
-			src="https://cdn.nba.com/logos/playoffs/playoffs-playin.svg"
+			src="https://cdn.nba.com/logos/playoffs/playoffs.svg"
 			alt="Playoffs"
 		/>
-		<p class="sub-title">Play-In start: April 12 | Play-Off start: April 16</p>
 	</div>
 	<div class="conferences">
 		<h2>Western Conference</h2>
@@ -74,7 +73,7 @@
 				teamA={TEAM.PHX}
 				teamB={TEAM.NOP}
 				onInput={onBracketInput('west', 'semis', 'winner1v8', TEAM.PHX, TEAM.NOP)}
-				title="Playoffs Round 1"
+				title="Round 1"
 			/>
 			<BracketPair
 				teamA={TEAM.DAL}
@@ -101,7 +100,7 @@
 					bracket.west.semis.winner1v8,
 					bracket.west.semis.winner4v5
 				)}
-				title="Conference Semi Finals"
+				title="Conf. Semis"
 			/>
 			<BracketPair
 				teamA={bracket.west.semis.winner3v6}
@@ -122,7 +121,7 @@
 					bracket.west.finals.winner1845,
 					bracket.west.finals.winner2736
 				)}
-				title="Conference Finals"
+				title="Conf. Finals"
 			/>
 		</div>
     <div class="east round finals">
@@ -134,10 +133,10 @@
 					bracket.east.finals.winner1845,
 					bracket.east.finals.winner2736
 				)}
-				title="Conference Finals"
+				title="Conf. Finals"
 			/>
 		</div>
-    <div class="eastern round semis">
+    <div class="east round semis">
       <BracketPair
         teamA={bracket.east.semis.winner1v8}
         teamB={bracket.east.semis.winner4v5}
@@ -146,7 +145,7 @@
           bracket.east.semis.winner1v8,
           bracket.east.semis.winner4v5
         )}
-				title="Conference Semi Finals"
+				title="Conf. Semis"
       />
       <BracketPair
         teamA={bracket.east.semis.winner3v6}
@@ -158,12 +157,12 @@
         )}
       />
     </div>
-    <div class="eastern round first-round">
+    <div class="east round first-round">
       <BracketPair
         teamA={TEAM.MIA}
         teamB={TEAM.ATL}
         onInput={onBracketInput('east', 'semis', 'winner1v8', TEAM.MIA, TEAM.ATL)}
-				title="Playoffs Round 1"
+				title="Round 1"
       />
       <BracketPair
         teamA={TEAM.PHI}
@@ -205,10 +204,7 @@
 		text-align: center;
 	}
 	.title_img {
-		width: 364px;
-	}
-	.sub-title {
-		color: #8e979e;
+		width: 219px;
 	}
 
 	.conferences {
@@ -216,7 +212,12 @@
 		grid-template-columns: 1fr 1fr;
 		column-gap: 2rem;
 	}
-	.conferences > h2:first-child {
+	.conferences > h2 {
+		color: #8e979e;
+		text-transform: uppercase;
+		margin-bottom: 0;
+	}
+	.conferences > h2:nth-child(2) {
 		text-align: right;
 	}
 
@@ -230,12 +231,12 @@
 		flex-direction: column;
 		justify-content: space-evenly;
 	}
-	:global(.bracket > .west h3) {
+	:global(.bracket > .east h3) {
 		text-align: right;
 	}
 
   .grand-finals {
-    margin: -200px auto 0;
+    margin: -250px auto 0;
     max-width: 20%;
   }
 	:global(.grand-finals h3) {
