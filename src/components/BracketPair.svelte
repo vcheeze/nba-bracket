@@ -10,6 +10,7 @@
 		position: 8
 	};
 	export let onInput;
+	export let title;
 
 	let teamAPrediction;
 	let teamBPrediction;
@@ -27,48 +28,61 @@
 	// }
 </script>
 
-<div class="bracket-pair">
-	<div class="team teamA">
-		<div class="team-details">
-			{#if teamA.logo}
-				<img class="team_logo" src={teamA.logo} alt="Team A Logo" />
-			{:else}
-				<div class="team_logo-spacer" />
-			{/if}
-			<p class="team_position">{teamA.position}</p>
-			<p class="team_name">{teamA.name}</p>
+<div class="bracket-pair-container">
+	{#if title}
+		<h3>{title}</h3>
+	{/if}
+	<div class="bracket-pair">
+
+		<div class="team teamA">
+			<div class="team-details">
+				{#if teamA.logo}
+					<img class="team_logo" src={teamA.logo} alt="Team A Logo" />
+				{:else}
+					<div class="team_logo-spacer" />
+				{/if}
+				<p class="team_position">{teamA.position}</p>
+				<p class="team_name">{teamA.name}</p>
+			</div>
+			<div class="prediction">
+				<input
+					type="number"
+					placeholder="Wins"
+					bind:value={teamAPrediction}
+					on:input={onInput(teamAPrediction, teamBPrediction)}
+					disabled={teamA.name === '___'}
+				/>
+			</div>
 		</div>
-		<div class="prediction">
-			<input
-				type="number"
-				placeholder="Wins"
-				bind:value={teamAPrediction}
-				on:input={onInput(teamAPrediction, teamBPrediction)}
-			/>
-		</div>
-	</div>
-	<div class="team teamB">
-		<div class="team-details">
-			{#if teamB.logo}
-				<img class="team_logo" src={teamB.logo} alt="Team B Logo" />
-			{:else}
-				<div class="team_logo-spacer" />
-			{/if}
-			<p class="team_position">{teamB.position}</p>
-			<p class="team_name">{teamB.name}</p>
-		</div>
-		<div class="prediction">
-			<input
-				type="number"
-				placeholder="Wins"
-				bind:value={teamBPrediction}
-				on:input={onInput(teamAPrediction, teamBPrediction)}
-			/>
+		<div class="team teamB">
+			<div class="team-details">
+				{#if teamB.logo}
+					<img class="team_logo" src={teamB.logo} alt="Team B Logo" />
+				{:else}
+					<div class="team_logo-spacer" />
+				{/if}
+				<p class="team_position">{teamB.position}</p>
+				<p class="team_name">{teamB.name}</p>
+			</div>
+			<div class="prediction">
+				<input
+					type="number"
+					placeholder="Wins"
+					bind:value={teamBPrediction}
+					on:input={onInput(teamAPrediction, teamBPrediction)}
+					disabled={teamB.name === '___'}
+				/>
+			</div>
 		</div>
 	</div>
 </div>
 
+
 <style>
+	.bracket-pair-container > h3 {
+		color: #8e979e;
+	}
+
 	.bracket-pair {
 		/* width: 204px; */
 		padding: 0 1rem;
@@ -79,7 +93,7 @@
 	.team {
 		display: flex;
 		justify-content: space-between;
-		padding: 1rem 0;
+		padding: 0.5rem 0;
 	}
 
 	.team.teamA {
@@ -93,11 +107,11 @@
 	.team_logo,
 	.team_logo-spacer {
 		width: 40px;
-		margin-right: 8px;
+		margin-right: 0.25rem;
 	}
 
 	.team_position {
-		margin-right: 8px;
+		margin-right: 0.25rem;
 		font-weight: bold;
 		color: #8e979e;
 	}

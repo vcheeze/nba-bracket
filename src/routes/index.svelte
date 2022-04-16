@@ -72,8 +72,9 @@
 		<div class="west round first-round">
 			<BracketPair
 				teamA={TEAM.PHX}
-				teamB={TEAM.SAS}
-				onInput={onBracketInput('west', 'semis', 'winner1v8', TEAM.PHX, TEAM.SAS)}
+				teamB={TEAM.NOP}
+				onInput={onBracketInput('west', 'semis', 'winner1v8', TEAM.PHX, TEAM.NOP)}
+				title="Playoffs Round 1"
 			/>
 			<BracketPair
 				teamA={TEAM.DAL}
@@ -87,8 +88,8 @@
 			/>
 			<BracketPair
 				teamA={TEAM.MEM}
-				teamB={TEAM.LAC}
-				onInput={onBracketInput('west', 'semis', 'winner2v7', TEAM.MEM, TEAM.LAC)}
+				teamB={TEAM.MIN}
+				onInput={onBracketInput('west', 'semis', 'winner2v7', TEAM.MEM, TEAM.MIN)}
 			/>
 		</div>
 		<div class="west round semis">
@@ -100,6 +101,7 @@
 					bracket.west.semis.winner1v8,
 					bracket.west.semis.winner4v5
 				)}
+				title="Conference Semi Finals"
 			/>
 			<BracketPair
 				teamA={bracket.west.semis.winner3v6}
@@ -120,6 +122,7 @@
 					bracket.west.finals.winner1845,
 					bracket.west.finals.winner2736
 				)}
+				title="Conference Finals"
 			/>
 		</div>
     <div class="east round finals">
@@ -131,6 +134,7 @@
 					bracket.east.finals.winner1845,
 					bracket.east.finals.winner2736
 				)}
+				title="Conference Finals"
 			/>
 		</div>
     <div class="eastern round semis">
@@ -142,6 +146,7 @@
           bracket.east.semis.winner1v8,
           bracket.east.semis.winner4v5
         )}
+				title="Conference Semi Finals"
       />
       <BracketPair
         teamA={bracket.east.semis.winner3v6}
@@ -158,6 +163,7 @@
         teamA={TEAM.MIA}
         teamB={TEAM.BKN}
         onInput={onBracketInput('east', 'semis', 'winner1v8', TEAM.MIA, TEAM.BKN)}
+				title="Playoffs Round 1"
       />
       <BracketPair
         teamA={TEAM.PHI}
@@ -171,8 +177,8 @@
       />
       <BracketPair
         teamA={TEAM.BOS}
-        teamB={TEAM.CLE}
-        onInput={onBracketInput('east', 'semis', 'winner2v7', TEAM.BOS, TEAM.CLE)}
+        teamB={TEAM.ATL}
+        onInput={onBracketInput('east', 'semis', 'winner2v7', TEAM.BOS, TEAM.ATL)}
       />
     </div>
 	</div>
@@ -181,6 +187,7 @@
       teamA={finals.west}
       teamB={finals.east}
       onInput={() => {}}
+			title="Finals"
     />
   </div>
   <footer>
@@ -223,14 +230,21 @@
 		flex-direction: column;
 		justify-content: space-evenly;
 	}
+	:global(.bracket > .west h3) {
+		text-align: right;
+	}
 
   .grand-finals {
     margin: -200px auto 0;
     max-width: 20%;
   }
+	:global(.grand-finals h3) {
+		text-align: center;
+	}
 
   footer {
-		margin: 8rem auto;
+		margin-top: 8rem;
+		margin-bottom: 2rem;
     text-align: center;
   }
 </style>
