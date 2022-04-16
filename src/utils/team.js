@@ -35,15 +35,15 @@ const WESTERN_TEAM = {
 		position: 6,
 		logo: 'https://cdn.nba.com/logos/nba/1610612743/global/D/logo.svg'
 	},
-	LAC: {
-		name: 'LAC',
+	MIN: {
+		name: 'MIN',
 		position: 7,
-		logo: 'https://cdn.nba.com/logos/nba/1610612746/global/D/logo.svg'
+		logo: 'https://cdn.nba.com/logos/nba/1610612750/global/D/logo.svg'
 	},
-  SAS: {
-		name: 'SAS',
+  NOP: {
+		name: 'NOP',
 		position: 8,
-		logo: 'https://cdn.nba.com/logos/nba/1610612759/global/D/logo.svg'
+		logo: 'https://cdn.nba.com/logos/nba/1610612740/global/D/logo.svg'
 	}
 };
 
@@ -78,15 +78,15 @@ const EASTERN_TEAM = {
 		position: 6,
 		logo: 'https://cdn.nba.com/logos/nba/1610612741/global/D/logo.svg'
 	},
-	CLE: {
-		name: 'CLE',
-		position: 7,
-		logo: 'https://cdn.nba.com/logos/nba/1610612739/global/D/logo.svg'
-	},
-  BKN: {
+	BKN: {
 		name: 'BKN',
-		position: 8,
+		position: 7,
 		logo: 'https://cdn.nba.com/logos/nba/1610612751/global/D/logo.svg'
+	},
+	ATL: {
+		name: 'ATL',
+		position: 8,
+		logo: 'https://cdn.nba.com/logos/nba/1610612737/global/D/logo.svg'
 	}
 };
 
